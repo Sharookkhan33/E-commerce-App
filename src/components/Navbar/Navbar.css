@@ -1,0 +1,152 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    position: relative;
+    background-color: #e8d5d5;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-menu li {
+    cursor: pointer;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.nav-menu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: red;
+}
+
+/* Login & Cart */
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-login-cart button {
+    width: 120px;
+    height: 40px;
+    border: 1px solid #7a7a7a;
+    border-radius: 20px;
+    font-size: 18px;
+    background: #ff5a5f;
+    color: white;
+    cursor: pointer;
+}
+.nav-login-cart button:hover {
+    background: #e60023;
+  }
+.nav-login-cart img:hover{
+    transform: scale(1.25);
+}
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 25px;
+    border-radius: 50%;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
+.nav-cart-count:hover{
+    transform: scale(1.25);
+
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        box-shadow: 0 1px 3px -2px black;
+        position: relative;
+        z-index: 1000; /* Ensures navbar is above other content */
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 200px;
+        background: linear-gradient(to left,#f9d0d1,rgb(227, 225, 225));
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 1001; /* Ensures menu is above the carousel */
+    }
+    
+    .nav-menu.open {
+        display: flex;
+    }
+    
+    .nav-login-cart {
+        display: flex;
+        align-items: center;
+    }
+    .nav-login-cart img:hover{
+        transform: scale(1.05);
+    }
+    
+    .nav-cart-count:hover{
+        transform: scale(1.05);
+    
+    }
+}
